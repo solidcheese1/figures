@@ -1,4 +1,4 @@
-#include "Figures.h"
+ï»¿#include "Figures.h"
 #include <iostream>
 
 HPEN getPen(int iPEN_STYLE, int iPEN_SIZE, int iCOLORREF)
@@ -55,8 +55,8 @@ void Ellipses::move(HDC hDC, int xMove, int yMove)
     clearFigure(hDC);
     center.X += xMove;
     center.Y += yMove;
-    // ïðè âûõîäå çà ãðàíèöû ðàáî÷åé îáëàñòè ïðîèñõîäèò ñäâèã ôèãóðû òîëüêî äî ãðàíèöû
-    // îêðàøèâàåì ãðàíèöó ôèãóðû ïðè íåêîððåêòíîé îïåðàöèè
+    // Ð¿Ñ€Ð¸ Ð²Ñ‹Ñ…Ð¾Ð´Ðµ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ñ€Ð°Ð±Ð¾Ñ‡ÐµÐ¹ Ð¾Ð±Ð»Ð°ÑÑ‚Ð¸ Ð¿Ñ€Ð¾Ð¸ÑÑ…Ð¾Ð´Ð¸Ñ‚ ÑÐ´Ð²Ð¸Ð³ Ñ„Ð¸Ð³ÑƒÑ€Ñ‹ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð´Ð¾ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
+    // Ð¾ÐºÑ€Ð°ÑˆÐ¸Ð²Ð°ÐµÐ¼ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñƒ Ñ„Ð¸Ð³ÑƒÑ€Ñ‹ Ð¿Ñ€Ð¸ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ð¹ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸
     bool flagIncorrect = false;
     if ((center.X + this->a) > EndArea.X) {
         center.X = EndArea.X - this->a;
@@ -199,8 +199,8 @@ void Rectangles::move(HDC hDC, int xMove, int yMove)
     clearFigure(hDC);
     center.X += xMove;
     center.Y += yMove;
-    // ïðè âûõîäå çà ãðàíèöû ðàáî÷åé îáëàñòè ïðîèñõîäèò ñäâèã ôèãóðû òîëüêî äî ãðàíèöû
-    // îêðàøèâàåì ãðàíèöó ôèãóðû ïðè íåêîððåêòíîé îïåðàöèè
+    // Ð¿Ñ€Ð¸ Ð²Ñ‹Ñ…Ð¾Ð´Ðµ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ñ€Ð°Ð±Ð¾Ñ‡ÐµÐ¹ Ð¾Ð±Ð»Ð°ÑÑ‚Ð¸ Ð¿Ñ€Ð¾Ð¸ÑÑ…Ð¾Ð´Ð¸Ñ‚ ÑÐ´Ð²Ð¸Ð³ Ñ„Ð¸Ð³ÑƒÑ€Ñ‹ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð´Ð¾ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹
+    // Ð¾ÐºÑ€Ð°ÑˆÐ¸Ð²Ð°ÐµÐ¼ Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñƒ Ñ„Ð¸Ð³ÑƒÑ€Ñ‹ Ð¿Ñ€Ð¸ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ð¹ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¸
     bool flagIncorrect = false;
     if ((center.X + this->a/2) > EndArea.X) {
         center.X = EndArea.X - this->a / 2;
